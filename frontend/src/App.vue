@@ -1,11 +1,22 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import Home from './components/Home.vue'
+
 </script>
 
 <template>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="logo">📚 Bibliothèque</div>
+      <nav>
+        <RouterLink to="/utilisateurs" class="active">👥 Utilisateurs</RouterLink>
+        <RouterLink to="/livres" class="prochaine">📔 Livres</RouterLink>
+      </nav>
+    </aside>
 
-  <RouterView />
+    <main class="content">
+      <RouterView />
+    </main>
+  </div>
 </template>
 
 <style scoped>
